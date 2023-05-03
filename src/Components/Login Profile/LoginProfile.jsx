@@ -38,36 +38,42 @@ const Profile = () => {
   }, []);
   return (
     <div className="LoginProfile">
-      <DetailsCardP
-        name={loginData[0].name}
-        img={loginData[0].avatar_url}
-        username={loginData[0].login}
-        location={loginData[0].location}
-        followers={loginData[0].followers}
-        following={loginData[0].following}
-        repos={loginData[0].public_repos}
-        link={loginData[0].html_url}
-      />
+      {loginData != undefined ? (
+        <>
+          <DetailsCardP
+            name={loginData[0].name}
+            img={loginData[0].avatar_url}
+            username={loginData[0].login}
+            location={loginData[0].location}
+            followers={loginData[0].followers}
+            following={loginData[0].following}
+            repos={loginData[0].public_repos}
+            link={loginData[0].html_url}
+          />
 
-      <h3>Repositories</h3>
+          <h3>Repositories</h3>
 
-      <div className="repo">
-        {state[0] != undefined ? (
-          <>
-            {state.map((apidata, key) => (
-              <RepoContainer
-                keys={key}
-                RepoName={apidata.name}
-                date={apidata.created_at}
-                lang={apidata.language}
-                link={apidata.url}
-              />
-            ))}
-          </>
-        ) : (
-          <>Loading.</>
-        )}
-      </div>
+          <div className="repo">
+            {state[0] != undefined ? (
+              <>
+                {state.map((apidata, key) => (
+                  <RepoContainer
+                    keys={key}
+                    RepoName={apidata.name}
+                    date={apidata.created_at}
+                    lang={apidata.language}
+                    link={apidata.url}
+                  />
+                ))}
+              </>
+            ) : (
+              <>Loading.</>
+            )}
+          </div>
+        </>
+      ) : (
+        <>Loading..</>
+      )}
     </div>
   );
 };
