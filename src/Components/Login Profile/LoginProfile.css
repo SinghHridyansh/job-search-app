@@ -1,0 +1,69 @@
+.LoginProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  height: 100%;
+  gap: 5rem;
+  padding-top: 3rem;
+}
+.LoginProfile > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.LoginProfile > h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+.RepoContainer {
+  background-color: #737dd2;
+  height: 12vh;
+  width: 70vw;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.RepoContainer > div {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 5rem;
+}
+.RepoContainer > div > div > h3 {
+  font-size: 1.1rem;
+}
+.RepoContainer > a {
+  padding-right: 20px;
+  text-decoration: none;
+  color: black;
+  height: 35px;
+  width: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.RepoContainer > h5 {
+  font-size: 1.1rem;
+}
+.RepoContainer > a:hover {
+  color: white;
+  transition: 0.2s ease-in;
+  background-color: #02a499;
+}
+.repo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}

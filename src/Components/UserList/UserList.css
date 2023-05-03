@@ -1,0 +1,10 @@
+.UserList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #252735;
+  height: 100vh;
+}

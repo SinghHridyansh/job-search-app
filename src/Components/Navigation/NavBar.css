@@ -1,0 +1,81 @@
+.navBar {
+  height: 80px;
+  background-color: #36394c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  /* border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; */
+}
+.navBar > div:nth-child(1) {
+  margin-left: 50px;
+}
+.navBar > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.navBar > input {
+  height: 33px;
+  width: 18vw;
+  border-radius: 8px;
+  border: none;
+}
+.navBar > div:nth-child(2) > button {
+  height: 33px;
+  width: 6vw;
+  border-radius: 8px;
+}
+#profile_btn:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.12);
+}
+.navBar > div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-right: 50px;
+}
+.links {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.FaUserAlt {
+  color: white;
+}
+.links > span {
+  font-size: 0.8rem;
+}
+.links > div {
+  background-color: #02a499;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.logout_btn {
+  height: 35px;
+  width: 5rem;
+  border-radius: 20px;
+  background-color: #02a499;
+  color: rgb(235, 235, 235);
+}
+.logout_btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+  background-color: rgb(247, 58, 58);
+  color: white;
+}
