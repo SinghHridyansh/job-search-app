@@ -1,16 +1,16 @@
 .login {
-  width: 430px;
-  height: 50vh;
+  width: 100%;
+  height: 100vh;
   box-shadow: 0 0 20px black;
-  padding: 30px;
-  margin: 150px auto;
+  /* padding: 30px; */
+  /* margin: 150px auto; */
   text-align: left;
-  border-top-right-radius: 5rem;
-  border-bottom-left-radius: 5rem;
+  /* border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem; */
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
   background-image: linear-gradient(
     to left top,
     #7584ff,
@@ -20,29 +20,35 @@
     #252735
   );
 }
-
-.login > h3 {
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.left > h3 {
   color: white;
   font-weight: 800;
   font-size: 2.5rem;
 }
-.login > div > label {
+.left > div > label {
   color: white;
   text-align: left;
-  margin-top: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
 }
-.login > div > input {
+.left > div > input {
   width: 20rem;
   height: 2rem;
   border-radius: 0.3rem;
   border: none;
 }
-.login > div {
+.left > div {
   margin-top: 1.5rem;
 }
 
-.login > div > button {
+.left > div > button {
   width: 7rem;
   height: 2rem;
   background-color: #02a499;
@@ -51,6 +57,47 @@
   font-weight: 700;
   font-size: 1rem;
 }
-.login > div > p {
+.left > div > button:hover {
+  color: #02a499;
+  transform: scale(1.1);
+  background-color: white;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+.left > div > p {
   color: white;
+}
+.right > img {
+  height: 40rem;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .login {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+  }
+  .right > img {
+    margin-top: 2rem;
+    display: block;
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .login {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+  }
+  .right > img {
+    margin-top: 2rem;
+    display: block;
+    width: 15rem;
+    height: 15rem;
+  }
 }

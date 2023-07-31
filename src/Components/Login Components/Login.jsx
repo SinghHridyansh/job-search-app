@@ -35,52 +35,60 @@ const Login = (props) => {
 
   return (
     <div className="login">
-      <h3>You Login Here</h3>
-      <div>
-        <label>Enter Email Address</label>
-        <br />
-        <input
-          type="text"
-          placeholder="Enter email address."
-          onChange={(e) => {
-            setUser({ ...user, email: e.target.value });
-          }}
+      <div className="left">
+        <h3>You Login Here</h3>
+        <div>
+          <label>Enter Email Address</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter email address."
+            onChange={(e) => {
+              setUser({ ...user, email: e.target.value });
+            }}
+          />
+        </div>
+
+        <div>
+          <label>Enter valid Github username</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter valid Github username."
+            onChange={(e) => {
+              setUser({ ...user, ghuser: e.target.value });
+            }}
+          />
+        </div>
+
+        <div>
+          <label>Enter password</label>
+          <br />
+          <input
+            type="password"
+            placeholder="Enter password"
+            onChange={(e) => {
+              setUser({ ...user, password: e.target.value });
+            }}
+          />
+        </div>
+
+        <div>
+          <button onClick={handleAuth}>Login</button>
+        </div>
+
+        <div>
+          <p>
+            Hridyansh@geek.in <br />
+            1234qwer
+          </p>
+        </div>
+      </div>
+      <div className="right">
+        <img
+          src="https://cdni.iconscout.com/illustration/premium/thumb/login-page-4468581-3783954.png"
+          alt=""
         />
-      </div>
-
-      <div>
-        <label>Enter valid Github username</label>
-        <br />
-        <input
-          type="text"
-          placeholder="Enter valid Github username."
-          onChange={(e) => {
-            setUser({ ...user, ghuser: e.target.value });
-          }}
-        />
-      </div>
-
-      <div>
-        <label>Enter password</label>
-        <br />
-        <input
-          type="password"
-          placeholder="Enter password"
-          onChange={(e) => {
-            setUser({ ...user, password: e.target.value });
-          }}
-        />
-      </div>
-
-      <div>
-        <button onClick={handleAuth}>Login</button>
-      </div>
-
-      <div>
-        <p>
-          Hridyansh@geek.in <br />
-          1234qwer
-        </p>
       </div>
     </div>
   );

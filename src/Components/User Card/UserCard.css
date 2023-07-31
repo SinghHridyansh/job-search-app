@@ -57,5 +57,43 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 0.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .UserCard {
+    width: 370px;
+    height: 170px;
+  }
+  .UserCard > div > img {
+    height: 6.5rem;
+    border-radius: 50%;
+  }
+  .UserCard > div > p {
+    font-size: 1.6rem;
+  }
+  .UserCard_deets {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .UserCard {
+    width: 400px;
+    height: 200px;
+  }
+  .UserCard > div > img {
+    height: 7.5rem;
+    border-radius: 50%;
+  }
+  .UserCard > div > p {
+    font-size: 1.6rem;
+  }
+  .UserCard_deets {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
 }
