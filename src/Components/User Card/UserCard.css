@@ -1,99 +1,106 @@
 .UserCard {
-  background-image: linear-gradient(
-    to right top,
-    #626ed4,
-    #5561b1,
-    #4a548e,
-    #40466c,
-    #36394c
-  );
-  width: 430px;
-  height: 200px;
+  background-color: white;
+  width: 570px;
+  height: 220px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0 0 5px black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   text-decoration: none;
-  color: white;
-}
-.userdetails {
-  text-decoration: none;
-  color: black;
+  color: #001d3d;
+  padding: 0px 20px 0 20px;
 }
 .UserCard:hover {
-  transform: scale(1.01);
-  transition: 0.2s ease-in-out;
+  transform: scale(1.05);
+  transition: 0.3s ease-in;
 }
-.UserCard > div > p {
-  margin: 0;
-  font-size: 1.7rem;
-  font-weight: 300;
-}
-.UserCard > div {
+.UserCard-L {
+  width: 80%;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
+.UserCard-R {
+  width: 20%;
+}
+.UserCard-R > a > button {
+  width: 80px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffc300;
 
-.followers > h4,
-.repos > h4,
-.following > h4 {
-  font-size: 0.9rem;
-  color: rgb(218, 218, 218);
+  font-weight: 700;
 }
-.followers > span,
-.repos > span,
-.following > span {
-  font-size: 0.9rem;
-  font-weight: 500;
+.UserCard-R > a > button:hover {
+  background-color: #6a994e;
+  color: white;
+  transition: 0.15s ease-in;
+  transform: scale(1.05);
 }
-.UserCard > div > img {
-  height: 10rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #252735;
-}
-.UserCard_deets {
+.name-role {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 8px;
 }
-
+.desc {
+  color: grey;
+  font-size: 14px;
+}
+.sal-loc-com {
+  display: flex;
+  gap: 30px;
+  color: #003566;
+}
+.sal-loc-com > span {
+  font-size: 14px;
+}
 @media screen and (max-width: 767px) {
   .UserCard {
-    width: 370px;
+    width: 270px;
     height: 170px;
   }
-  .UserCard > div > img {
-    height: 6.5rem;
-    border-radius: 50%;
+  .UserCard-L {
+    gap: 10px;
   }
-  .UserCard > div > p {
-    font-size: 1.6rem;
+  .UserCard-R > a > button {
+    width: 55px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffc300;
+
+    font-weight: 500;
   }
-  .UserCard_deets {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.2rem;
+
+  .name-role {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .name-role > h3 {
+    font-size: 13px;
+  }
+  .name-role > h4 {
+    font-size: 11px;
+  }
+  .desc {
+    color: grey;
+    font-size: 10px;
+  }
+  .sal-loc-com {
+    gap: 35px;
+  }
+  .sal-loc-com > span {
+    font-size: 8px;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .UserCard {
     width: 400px;
     height: 200px;
-  }
-  .UserCard > div > img {
-    height: 7.5rem;
-    border-radius: 50%;
-  }
-  .UserCard > div > p {
-    font-size: 1.6rem;
-  }
-  .UserCard_deets {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.2rem;
   }
 }

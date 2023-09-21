@@ -4,54 +4,38 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const UserCard = (props) => {
-  const [data, setdata] = useState({});
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
+  }
 
-  const getData = async () => {
-    const response = await fetch(
-      `https://api.github.com/users/${props.username}`
-    );
-    const data = await response.json();
-    setdata(data);
-    // console.log(data);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+  let description = truncate(props.desc, 20);
 
   return (
-    <>
-      <Link to={`/userdetails/${props.username}`} className="userdetails">
-        <div className="UserCard">
-          <div>
-            <img src={props.img} alt=".." />
-          </div>
-          <div>
-            <p>{props.username}</p>
-            <div className="UserCard_deets">
-              <div className="followers">
-                <h4>Followers</h4>
-
-                <span>{data.followers}</span>
-              </div>
-              <br />
-              <div className="repos">
-                <h4>Repositories</h4>
-
-                <span>{data.public_repos}</span>
-              </div>
-              <br />
-              <div className="following">
-                <h4>Following</h4>
-
-                <span>{data.following}</span>
-              </div>
-              <br />
-            </div>
-          </div>
+    <div className="UserCard">
+      <div className="UserCard-L">
+        <div className="name-role">
+          <h3>{props.Cname}</h3>
+          <h4>{props.role}</h4>
         </div>
-      </Link>
-    </>
+        <div className="desc">{description}...</div>
+        <div className="sal-loc-com">
+          <span>$ {props.smin}</span> <span>{props.loc}</span>
+          {/* <a href= target="_blank">
+            visit
+          </a> */}
+        </div>
+      </div>
+      <div className="UserCard-R">
+        <a href={props.joblink} target="_blank">
+          <button>Apply</button>
+        </a>
+      </div>
+    </div>
   );
 };
 
 export default UserCard;
+
+{
+  /* <Link to={`/userdetails/${props.username}`} className="userdetails"> */
+}

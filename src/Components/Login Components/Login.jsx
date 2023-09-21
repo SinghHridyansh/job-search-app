@@ -9,20 +9,22 @@ const Login = (props) => {
   const { setisloggedIn } = useContext(AuthContext);
   const dispatch = useDispatch();
   const [user, setUser] = useState({
+    name: "",
     email: "",
     password: "",
     ghuser: "",
   });
 
   const getData = async () => {
-    const response = await fetch(`https://api.github.com/users/${user.ghuser}`);
+    const response = await fetch();
     const data = await response.json();
     dispatch(addData(data));
   };
 
   const handleAuth = () => {
     if (
-      user.email === "Hridyansh@geek.in" &&
+      // user.name != "" &&
+      user.email === "work@hridyansh.com" &&
       user.password === "1234qwer" &&
       user.ghuser != ""
     ) {
@@ -34,61 +36,82 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login">
-      <div className="left">
-        <h3>You Login Here</h3>
-        <div>
-          <label>Enter Email Address</label>
-          <br />
-          <input
-            type="text"
-            placeholder="Enter email address."
-            onChange={(e) => {
-              setUser({ ...user, email: e.target.value });
-            }}
-          />
-        </div>
+    <div className="login-main">
+      <div className="login">
+        <div className="left">
+          <h3>Login</h3>
+          <div>
+            <label>Enter your name</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your name"
+              onChange={(e) => {
+                setUser({ ...user, name: e.target.value });
+              }}
+            />
+          </div>
+          <div>
+            <label>Enter Email Address</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter email address."
+              onChange={(e) => {
+                setUser({ ...user, email: e.target.value });
+              }}
+            />
+          </div>
 
-        <div>
-          <label>Enter valid Github username</label>
-          <br />
-          <input
-            type="text"
-            placeholder="Enter valid Github username."
-            onChange={(e) => {
-              setUser({ ...user, ghuser: e.target.value });
-            }}
-          />
-        </div>
+          <div>
+            <label>Enter a language of your choice</label>
+            <br />
+            <input
+              type="text"
+              placeholder="C, C#, Java, Python, etc"
+              onChange={(e) => {
+                setUser({ ...user, ghuser: e.target.value });
+              }}
+            />
+          </div>
 
-        <div>
-          <label>Enter password</label>
-          <br />
-          <input
-            type="password"
-            placeholder="Enter password"
-            onChange={(e) => {
-              setUser({ ...user, password: e.target.value });
-            }}
-          />
-        </div>
+          <div>
+            <label>Enter password</label>
+            <br />
+            <input
+              type="password"
+              placeholder="Enter password"
+              onChange={(e) => {
+                setUser({ ...user, password: e.target.value });
+              }}
+            />
+          </div>
 
-        <div>
-          <button onClick={handleAuth}>Login</button>
-        </div>
+          <div>
+            <button onClick={handleAuth}>Login</button>
+          </div>
 
-        <div>
-          <p>
-            Hridyansh@geek.in <br />
-            1234qwer
-          </p>
+          <div>
+            <p>
+              work@hridyansh.com <br />
+              1234qwer
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="right">
-        <img
-          src="https://cdni.iconscout.com/illustration/premium/thumb/login-page-4468581-3783954.png"
+        <div className="right">
+          {/* <img
+          src="https://images.rawpixel.com/image_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3YxMDExLTA4LWMta3NtbDJqM2MuanBn.jpg"
           alt=""
-        />
+        /> */}
+          {/* <img
+            src="https://image.slidesdocs.com/responsive-images/docs/a-doodle-with-a-simple-blue-abstract-design-page-border-background-word-template_202dfb3602__1131_1600.jpg"
+            alt=""
+          /> */}
+          <h1>
+            Welcome <br />
+            Back!
+          </h1>
+        </div>
       </div>
     </div>
   );

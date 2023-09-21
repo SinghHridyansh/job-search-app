@@ -5,8 +5,6 @@ export const AuthContext = createContext();
 function CustomProvider({ children }) {
   const [isloggedIn, setisloggedIn] = useState(false);
 
-  // const [isloggedIn, setisloggedIn] = useState(true);
-
   const [name, setname] = useState("");
   return (
     <AuthContext.Provider

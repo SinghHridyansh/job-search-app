@@ -1,48 +1,50 @@
-.login {
+.login-main {
   width: 100%;
   height: 100vh;
-  box-shadow: 0 0 20px black;
-  /* padding: 30px; */
-  /* margin: 150px auto; */
-  text-align: left;
-  /* border-top-right-radius: 5rem;
-  border-bottom-left-radius: 5rem; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  width: 70%;
+  height: 70vh;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  background-image: linear-gradient(
-    to left top,
-    #7584ff,
-    #5d6cc9,
-    #485495,
-    #363d63,
-    #252735
-  );
+  background-color: white;
 }
 .left {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
+  width: 50%;
+  margin-left: 40px;
 }
 .left > h3 {
-  color: white;
+  color: #14213d;
   font-weight: 800;
   font-size: 2.5rem;
 }
 .left > div > label {
-  color: white;
+  color: rgb(89, 89, 89);
   text-align: left;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
   font-size: 1rem;
 }
 .left > div > input {
   width: 20rem;
   height: 2rem;
+
   border-radius: 0.3rem;
-  border: none;
+  border: 1px solid grey;
+  padding-left: 10px;
 }
 .left > div {
   margin-top: 1.5rem;
@@ -51,48 +53,93 @@
 .left > div > button {
   width: 7rem;
   height: 2rem;
-  background-color: #02a499;
+  background-color: #003566;
   border: none;
   color: white;
+  border-radius: 5px;
   font-weight: 700;
   font-size: 1rem;
 }
 .left > div > button:hover {
-  color: #02a499;
+  color: #003566;
   transform: scale(1.1);
-  background-color: white;
+  background-color: #ffc700;
   transition: all 0.2s ease-in;
   cursor: pointer;
 }
 .left > div > p {
+  color: grey;
+}
+.right {
+  /* background-image: url("https://image.slidesdocs.com/responsive-images/docs/a-doodle-with-a-simple-blue-abstract-design-page-border-background-word-template_202dfb3602__1131_1600.jpg"); */
+  background-image: url("/src/Assets/Background.jpg");
+  object-fit: cover;
+  width: 70%;
+  height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right > h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 700;
   color: white;
 }
-.right > img {
-  height: 40rem;
+/* .right > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   display: block;
-}
+} */
 @media screen and (max-width: 767px) {
+  .login-main {
+    background-image: url("/src/Assets/Background.jpg");
+  }
   .login {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column-reverse;
-    align-items: center;
-    gap: 3rem;
+    align-items: flex-start;
+    width: 90%;
+    height: 60%;
   }
-  .right > img {
-    margin-top: 2rem;
-    display: block;
-    width: 15rem;
-    height: 15rem;
+  .left {
+    margin-left: 40px;
+  }
+  .right {
+    display: none;
+  }
+  .left > div > label {
+    font-size: 0.8rem;
+  }
+  .left > div > input {
+    width: 17rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid grey;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .login-main {
+    background-image: url("/src/Assets/Background.jpg");
+  }
   .login {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
     gap: 3rem;
+  }
+  .left {
+    margin-left: 0px;
+  }
+  .right {
+    display: none;
+  }
+  .right > h1 {
+    font-size: 3rem;
   }
   .right > img {
     margin-top: 2rem;

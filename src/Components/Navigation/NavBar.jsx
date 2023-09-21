@@ -25,14 +25,11 @@ const NavBar = () => {
     <nav className="navBar">
       <div>
         <Link to="/" className="links">
-          <h2 className="logo">
-            Github <br />
-            Explorer
-          </h2>
+          <h2 className="logo">JobLelo</h2>
         </Link>
       </div>
 
-      <input type="text" onChange={(e) => setname(e.target.value)} />
+      {/* <input type="text" onChange={(e) => setname(e.target.value)} /> */}
       <OutsideClickHandler
         onOutsideClick={() => {
           setMenuOpened(false);
@@ -44,7 +41,7 @@ const NavBar = () => {
               Home
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link to="/profile" className="links" id="profile_btn">
               <div>
                 <FaUserAlt className="FaUserAlt" />
@@ -55,7 +52,7 @@ const NavBar = () => {
                 <span>Profile</span>
               )}
             </Link>
-          </div>
+          </div> */}
           <button
             onClick={() => {
               setisloggedIn(false);
@@ -68,7 +65,11 @@ const NavBar = () => {
         </div>
       </OutsideClickHandler>
       <div className="menu-icon" onClick={() => setMenuOpened((prev) => !prev)}>
-        <BiMenuAltRight size={40} color={"white"} />
+        <BiMenuAltRight
+          size={40}
+          color={"#001d3d"}
+          className="menu-icon-icon"
+        />
       </div>
     </nav>
   );
